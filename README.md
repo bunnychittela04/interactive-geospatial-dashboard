@@ -1,4 +1,5 @@
 Interactive Geospatial Dashboard
+
 This project implements a dynamic dashboard interface using React/Next.js and TypeScript. It visualizes data over an interactive map and timeline, supporting polygon creation and color-coded data display based on selected datasets.
 
 
