@@ -8,6 +8,7 @@ Here's how the dashboard looks with a few drawn polygons and the timeline active
 
 
 Features
+
 The dashboard includes the following key functionalities:
 
 Timeline Slider (STEP 1):
@@ -20,6 +21,7 @@ Visually shows selected time(s) with daily marks.
 
 Includes a Play/Pause button for automatic timeline advancement.
 
+
 Interactive Map (STEP 2):
 
 An embedded Leaflet map, centered on India.
@@ -27,6 +29,7 @@ An embedded Leaflet map, centered on India.
 Zoom is locked at a specific resolution (zoom level 6) as per requirements.
 
 Maintains polygon visibility when the user moves the map.
+
 
 Polygon Drawing Tools (STEP 3):
 
@@ -38,6 +41,7 @@ Polygons persist on the map after creation.
 
 Users can view all drawn polygons in the sidebar and delete any polygon.
 
+
 Data Source Selection in Sidebar (STEP 4):
 
 A dedicated sidebar provides controls for each drawn polygon.
@@ -45,6 +49,7 @@ A dedicated sidebar provides controls for each drawn polygon.
 Currently uses Open-Meteo's temperature_2m as the mandatory data source.
 
 Users can define threshold-based coloring rules using numerical inputs (Min/Max) and a color picker, similar to data filtering in spreadsheets.
+
 
 Color Polygons Based on Data (STEP 5):
 
@@ -56,18 +61,23 @@ If the timeline range is more than 1 hour, the temperature values are averaged.
 
 The polygon's color is dynamically updated based on the fetched average temperature and its defined color rules.
 
+
 Open-Meteo API Connection (STEP 6):
 
 Connects to https://archive-api.open-meteo.com/v1/archive.
 
 Uses latitude, longitude (from polygon centroid), start date, end date, and hourly=temperature_2m parameters.
 
+
 Dynamic Updates on Timeline Change (STEP 7):
 
 When the timeline slider is adjusted (manually or via play button), all polygons automatically fetch updated data, re-apply color rules, and visually update on the map.
 
+
 Tech Stack
+
 Required:
+
 React/Next.js: Frontend framework.
 
 TypeScript: For type safety.
@@ -80,7 +90,9 @@ Leaflet.draw & React-Leaflet-Draw: Drawing tools for Leaflet.
 
 Ant Design: UI component library.
 
+
 Implemented Optional/Liked:
+
 date-fns: Date manipulation utilities.
 
 uuid: For generating unique IDs.
@@ -91,12 +103,15 @@ uuid: For generating unique IDs.
 
 @ant-design/nextjs-registry: Ant Design integration for Next.js App Router.
 
+
 Setup and Run Instructions
+
 Follow these steps to get the project running on your local machine:
 
-Clone the repository:
+1.Clone the repository:
 
 git clone <your-repository-url>
+
 cd my-dashboard
 
 (Replace <your-repository-url> with the actual URL of your GitHub repository.)
